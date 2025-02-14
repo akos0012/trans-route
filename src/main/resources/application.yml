@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: trans-route
+  datasource:
+    url: jdbc:postgresql://localhost:5432/trans-route
+    username: postgres
+    password: uborka
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    open-in-view: false
+
+tr:
+  jwtData:
+    issuer: transportPlanApp
+    alg: HMAC512
+    secret: mysecret
+    duration: 10m
+  delay:
+    delay-percentages:
+      30: 5
+      60: 10
+      120: 20
